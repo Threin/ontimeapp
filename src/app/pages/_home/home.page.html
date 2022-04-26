@@ -1,0 +1,53 @@
+<!-- <ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Hi {{name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="processLogout()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="fondohome">
+  <div class="main_content_div">
+<ion-toolbar color="primary">
+  <ion-buttons slot="start" class="menu_btn">
+    <ion-menu-button menuId="custom-menu" auto-hide="false" color="light"></ion-menu-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button fill="clear" color="light" [routerLink]="['/', 'home', 'profile']">
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+      <!-- <ion-title>Back Button</ion-title> -->
+
+    <div class="user_div">
+      <div class="first_div">
+        <ion-label class="welcome">Hi,</ion-label>
+        <ion-label class="username">{{ name }} - {{id}}</ion-label>
+      </div>
+      <div class="user_back" [style.backgroundImage]="'url(assets/yeshua.png)'">
+
+      </div>
+    </div>
+
+    <div class="content_div animated bounceInUp">
+      <ion-label class="hello_lbl">Welcome, to your dashboard</ion-label>
+
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6" (click)="goToDelivery()" *ngFor="let item of (tasks | slice : 1)">
+            <div class="col_div">
+              <img src="{{item.img}}">
+              <ion-label>{{item.imgName}}</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

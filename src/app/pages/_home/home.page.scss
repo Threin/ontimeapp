@@ -1,0 +1,154 @@
+
+.fondohome{
+  // --background: linear-gradient(180deg, #259942ff, #70B139ff,  #2A789Bff);
+  --background: var(--ion-color-primary);
+}
+.main_content_div{
+  width: 100%;
+
+  .menu_btn{
+    position: relative;
+    // top: 20px;
+    left: 10px;
+  }
+
+  ion-label{
+    display: block;
+    color: #BC252Cff;
+    text-align: center;
+  }
+
+  .user_div{
+    padding: 20px;
+    width: 100%;
+    height: 260px;
+    display:flex;
+    padding-top: 40px;
+    justify-content: space-between;
+
+    .first_div{
+      padding-top: 35px;;
+
+      .welcome{
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+      }
+      .username{
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .user_back{
+
+    height: 100px;
+    width: 80px;
+    border: solid white;
+    border-radius: 10px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .content_div{
+    background: white;
+    width: 100%;
+    border-top-right-radius: 75px;
+    margin-top: -90px;
+    padding-top: 30px;
+
+    .hello_lbl{
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 10px;
+      padding-left: 5px;
+      margin-top: 5px;
+    }
+
+    ion-grid {
+      padding: 0px;
+    }
+
+    .col_div{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 150px;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+      border-radius: 5px;
+
+      img{
+        width: 70px;
+      }
+      ion-label{
+        color: var(--ion-color-primary);
+        margin-top: 5px;
+      }
+    }
+
+  }
+}
+
+.animated{
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInUp{
+  0%{
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+  60%{
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+  }
+  80%{
+
+    -webkit-transform: translateY(10px);
+  }
+  100%{
+
+    -webkit-transform: translateY(0);
+  }
+}
+
+.bounceInUp{
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+@keyframes bounceInUp{
+  0%{
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+  60%{
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+  }
+  80%{
+
+    -webkit-transform: translateY(10px);
+  }
+  100%{
+
+    -webkit-transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+.fondologin{
+    --ion-background-color: #ffff;
+    // --background: linear-gradient(50deg,#483434ff, #BC252Cff, #FBD81Aff, #F6C322ff);
+    // --background: linear-gradient(180deg, #259942ff, #70B139ff,  #2A789Bff);
+    // --background: linear-gradient(135deg, #44a13e, #A8D172ff, #15498e);
+    // --background: linear-gradient(135deg, #44a13e, #A8D172ff, #FEDF13);
+}
+.wrapper{
+    width: 100%;
+    .logo{
+        font-size: 50px;
+        margin: auto;
+        width: 150px;
+        padding-top: 25px;
+        text-align: center;
+        font-weight: 600;
+        color: #ffd700;
+        span{
+            color: black;
+        }
+    }
+    .tag_line{
+        margin-top: 20px;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .triangle{
+        position: relative;
+        z-index: -1;
+        .triangle-bottomright{
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 0;
+            height: 0;
+            border-bottom: 300px solid #3880ff;
+            border-left: 200px solid transparent;
+        }
+
+        .triangle-right{
+            position: absolute;
+            left:0;
+            top: 90px;
+            width: 0;
+            height: 0;
+            border-top: 300px solid #3880ff;
+            border-right: 200px solid transparent;
+
+        }
+    }
+
+    .box {
+        width: 92%;
+        height: auto;
+        z-index: 9999;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;
+        background-color: #fff;
+        // background-color: linear-gradient(135deg, #44a13e, #A8D172ff, #FEDF13);
+
+        h5{
+            text-align: center;
+            padding-top: 15px !important;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #022c43;
+
+        }
+        .btn_div{
+            display: flex;
+            margin-top: 20px;
+            font-size: 30px;
+            .btn{
+                background-color: #BC262D;
+                padding: 10px 80px;
+                font-weight: 600;
+                margin-right: auto;
+                margin-left: auto;
+                font-size: 20px;
+                border-radius: 20px;
+                color: white;
+            }
+        }
+
+        .label{
+            margin-bottom: 10px;;
+            // background-color: #fff;
+        }
+        .box-item{
+            background-color: #fff !important;
+        }
+
+
+
+
+    }
+}

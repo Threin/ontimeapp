@@ -1,0 +1,112 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <!-- <ion-title class="ion-text-center">ONTIMEDELIVERY</ion-title> -->
+    <p class="ion-text-center">On-Time Delivery</p>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-grid>
+
+  </ion-grid>
+  <!-- <ion-list class="popover" lines="none">
+    <ion-row>
+      <ion-col col="6">
+        <ion-item>
+          <ion-label class="ion-text-wrap">
+            <h1>
+              <b>9</b>
+              <p>Scanned Permits</p>
+            </h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col="6" >
+        <ion-item>
+          <ion-label class="ion-text-wrap ion-text-right">
+            <h1>
+              <b>9</b>
+              <p>Delivered Permits</p>
+            </h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-list> -->
+
+  <div class="ion-padding" (ionChange)="segmentedChanged($event)">
+    <ion-segment mod="ios" [value]="segmentValue">
+      <ion-segment-button value="1">
+        <ion-label>In-Transit</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>Delivered</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" size="small" (click)="openScan()">
+      <!-- <ion-icon name="qr-scanner"></ion-icon> -->
+      <ion-icon name="qr-code-outline" title="Barcode-Scanner"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown"></ion-refresher-content>
+  </ion-refresher>
+  <ion-list lines="none">
+    <ion-item color="light">
+      <ion-label class="heading"> {{segmentValue == '1' ? 'In-Transit' : 'Delivered Permits'}}</ion-label>
+      <ion-button slot="end" fill="clear" size="small">
+        <ion-icon slot="icon-only" name="options"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <!-- <ion-item-sliding> -->
+    <ion-item-group>
+      <ion-item class="ion-padding-vertical popItem" *ngFor="let item of ( segmentValue == '1') ? inTransit : delivered ">
+        <!-- <ion-thumbnail slot="start">
+          <div class="ion-text-center" *ngIf="segmentValue == '1'">
+            <ion-text color="white">In-Transit</ion-text>
+          </div>
+          <p class="ion-text-center" [style.margin]="segmentValue == '1' ? '10px 0':'20px 0'">
+            <ion-text color="white">{{item?.permit_bin}}</ion-text>
+          </p>
+        </ion-thumbnail> -->
+        <ion-label>
+          <p class="ion-text-wrap" color="primary">{{item?.permit_bin}}</p>
+
+          <ion-note color="dark"><b>{{item?.permit_taxPayersName}}</b></ion-note>
+          <p class="ion-text-wrap">{{item?.permit_address}}</p>
+
+        </ion-label>
+      </ion-item>
+
+        <!-- <ion-item-options>
+          <ion-item-option (click)="openView('1')">
+            <ion-icon name="qr-code-outline" title="Barcode-Scanner"></ion-icon>
+            view
+          </ion-item-option>
+          <ion-item-option (click)="openView('1')" color="warning">
+            <ion-icon name="qr-code-outline" title="Barcode-Scanner"></ion-icon>
+
+            signature
+          </ion-item-option>
+
+        </ion-item-options> -->
+    </ion-item-group>
+  <!-- </ion-item-sliding> -->
+
+  </ion-list>
+  <!-- <ion-list *ngFor="let permit of permits">
+    <ion-item>{{permit.permit_bin}}</ion-item>
+  </ion-list> -->
+</ion-content>

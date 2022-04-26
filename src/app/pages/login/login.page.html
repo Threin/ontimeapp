@@ -1,0 +1,50 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="fondologin">
+  <div class="wrapper">
+    <div class="logo">
+      <!-- Ontime<span>Delivery</span> -->
+      <ion-img src="../../assets/otd_logo_final.png"></ion-img>
+    </div>
+    <div class="tag_line">
+      Fast and Secure delivery services
+    </div>
+
+    <div class="triangle">
+      <div class="triangle-bottomright"></div>
+      <div class="triangle-right"></div>
+    </div>
+
+    <div class="box">
+      <h5>Login Details</h5>
+      <ion-item class="box-item">
+        <ion-label class="label" position="floating">Email Address</ion-label>
+        <ion-input type="text" placeholder="Email" [(ngModel)]="email_address"></ion-input>
+      </ion-item>
+      <ion-item class="box-item">
+        <ion-label class="label" position="floating">Password</ion-label>
+        <ion-input class="box-input" type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <div class="btn_div">
+        <button type="submit" class="btn" (click)="tryLogin()">Submit</button>
+        <!-- <ion-button expand="full" class="no-padding" color="success" (click)="tryLogin()">Login</ion-button> -->
+
+      </div>
+    </div>
+  </div>
+  <!-- <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Email" [(ngModel)]="email_address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button expand="full" class="no-padding" color="success" (click)="tryLogin()">Login</ion-button>
+  </ion-list> -->
+
+</ion-content>
